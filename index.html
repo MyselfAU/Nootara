@@ -179,6 +179,15 @@
       #reader #prevBtn span,#reader #nextBtn span{display:none}
       #reader .reader-book small{font-size:7px}
     }
+
+    .swipe-hint{display:none}
+    @media(max-width:800px){
+      #reader .card-tools #prevBtn,#reader .card-tools #nextBtn{display:none}
+      #reader .card-tools{display:flex;justify-content:center;margin-top:26px}
+      #reader #shuffleBtn{min-width:180px}
+      #reader .swipe-hint{display:flex;justify-content:center;align-items:center;gap:8px;margin:14px 0 0;font-size:12px;color:#8a8a80;letter-spacing:.2px}
+      #reader .swipe-hint span{font-size:14px;opacity:.7}
+    }
   </style>
 </head>
 <body>
@@ -228,6 +237,7 @@
           <div class="card-stage" id="cardStage"><div class="card-stack stack-back" aria-hidden="true"></div><div class="card-stack stack-front" aria-hidden="true"></div><article class="flashcard" id="flashcard" aria-live="polite"><div class="card-top"><span class="card-index" id="cardIndex">IDEA 01 · 40</span><button class="bookmark-btn" id="bookmarkBtn" aria-label="Save this card" title="Save card">♡</button></div><div class="card-center"><div class="category" id="cardCategory">THE COMPOUND EFFECT</div><h2 class="card-title" id="cardTitle">Small changes become remarkable results.</h2><p class="card-text" id="cardText">Tiny improvements may feel invisible today, yet repeated choices quietly shape where you end up.</p></div><div class="card-bottom"><span id="cardAttribution">A Nootara reflection on Atomic Habits</span><span class="sparkle">✳</span></div></article></div>
           <div class="card-tools"><div class="tool-left"><button class="tool-btn" id="prevBtn" aria-label="Previous card">← <span>Back</span></button><button class="tool-btn" id="shuffleBtn" aria-label="Show a random card">⤨ <span>Surprise me</span></button></div><div class="tool-right"><button class="tool-btn main-next" id="nextBtn" aria-label="Next idea"><span>Next idea</span> →</button></div></div>
           <p class="key-hint"><kbd>←</kbd> <kbd>→</kbd> move through ideas <span style="margin-left:9px">·</span> swipe on touch screens</p>
+          <p class="swipe-hint" aria-hidden="true"><span>←</span> Swipe the card to explore <span>→</span></p>
         </div>
       </div>
       <footer class="read-footer"><span>Original takeaways, inspired by the book · No direct quotations</span><button id="readerDone">Close reading</button></footer>
@@ -321,6 +331,53 @@
         {category:'Focus',title:'Make your current action clear.',text:'When the next step is specific, you spend less attention deciding what to do.'},
         {category:'Completion',title:'Close loops when the work is truly finished.',text:'Marking an item complete gives your system an accurate picture of what still needs attention.'},
         {category:'Trust',title:'Let your system hold reminders, not your memory.',text:'External notes free your attention for thinking, deciding, and doing.'}
+      ]}
+      ,{id:'steal-like-an-artist',title:'Steal Like an Artist',author:'Austin Kleon',tag:'Creativity · Making art',description:'Borrow thoughtfully, share generously, and make something that feels like yours.',color:'#eadfb6',duration:'~9 min',cards:[
+        {category:'Influence',title:'Every new idea grows from earlier ones.',text:'Almost no creative work appears from nowhere. Seeing your work as part of a long conversation can ease the pressure to be perfectly original.'},
+        {category:'Mindset',title:'Let go of the lone-genius story.',text:'Strong work usually comes from many influences, conversations, and experiments, not from one flash of magic.'},
+        {category:'Remixing',title:'Think of making things as remixing.',text:'New work often comes from combining pieces you have gathered, and the way you combine them becomes your contribution.'},
+        {category:'Selection',title:'Choose your influences with care.',text:'You become a blend of what you take in, so surround yourself with work that is worth absorbing.'},
+        {category:'Research',title:'Borrow from many sources, not just one.',text:'Taking from a single person feels like copying. Drawing from many sources slowly turns into your own point of view.'},
+        {category:'Practice',title:'Copy to learn, then move on.',text:'Imitating work you admire is training that shows how it was made. Treat it as practice, not as the finished piece.'},
+        {category:'Depth',title:'Copy the thinking, not the surface.',text:'Look past the style and ask why the creator made each choice. Their reasoning travels further than their look.'},
+        {category:'Voice',title:'Your style appears in the gaps.',text:'When you try to copy something and fall short, the difference between the original and your version is often where your own style begins.'},
+        {category:'Identity',title:'Start before you know who you are.',text:'You do not need a finished identity to begin. Doing the work is how you find out what kind of creator you are.'},
+        {category:'Confidence',title:'Act like the creator you want to become.',text:'Behaving as if you already belong in the craft helps you take first steps while real confidence catches up.'},
+        {category:'Heroes',title:'Treat your heroes as teachers.',text:'Study the people whose work moves you. Learn how they practiced, what they struggled with, and who shaped them.'},
+        {category:'Lineage',title:'Trace the family tree of your influences.',text:'Find who your heroes admired, then who those people admired. Each step back opens a wider pool of ideas.'},
+        {category:'Collecting',title:'Keep a collection of ideas worth saving.',text:'A folder, notebook, or board of things that spark you becomes a personal supply for the days you feel stuck.'},
+        {category:'Notebook',title:'Carry something to capture ideas.',text:'Ideas are slippery. A pocket notebook or notes app turns passing thoughts into material you can use later.'},
+        {category:'Curiosity',title:'Follow what keeps pulling your attention.',text:'The subjects you keep returning to point toward work that only you would make.'},
+        {category:'Purpose',title:'Make the thing you wish already existed.',text:'If you cannot find the book, song, or tool you want, that gap may be an invitation to create it yourself.'},
+        {category:'Honesty',title:'Aim for honest rather than original.',text:'Work that comes from real interest and a real point of view feels fresh, even when the ingredients are familiar.'},
+        {category:'Making',title:'Use your hands, not only a screen.',text:'Sketching, cutting, writing, or building by hand can loosen ideas that feel stuck on a computer.'},
+        {category:'Environment',title:'Give messy work its own space.',text:'One area for screens and another for physical, untidy work helps you switch between polishing and exploring.'},
+        {category:'Play',title:'Let side projects feed your main work.',text:'Hobbies and experiments can lead to techniques and ideas your main work would never reach alone.'},
+        {category:'Beginner’s mind',title:'Keep an amateur’s fearlessness.',text:'Beginners try things experts avoid because they do not know the rules. That freedom can lead to surprising discoveries.'},
+        {category:'Learning',title:'Learn out loud by sharing your progress.',text:'Posting what you are working on invites feedback, attracts fellow learners, and keeps you accountable.'},
+        {category:'Process',title:'Let people watch how you work.',text:'Sketches, notes, and unfinished steps help others connect with the story behind your finished pieces.'},
+        {category:'Teaching',title:'Share what you know.',text:'Explaining what you learn helps other people and deepens your own understanding at the same time.'},
+        {category:'Generosity',title:'Be generous with your ideas.',text:'Giving away tips and discoveries builds goodwill, and the people you help often help you in return.'},
+        {category:'Visibility',title:'Make strong work, then put it in front of people.',text:'Quality matters, but work that stays hidden cannot find an audience. A visible place gives it a chance.'},
+        {category:'Community',title:'Find your people.',text:'Creative friends, mentors, and groups offer feedback, encouragement, and ideas you would not reach alone.'},
+        {category:'Scenes',title:'Great work often grows in shared scenes.',text:'Breakthroughs tend to happen where people inspire and challenge one another, so add something to a scene.'},
+        {category:'Connection',title:'Look beyond your neighbourhood for creative company.',text:'The internet lets you learn from and talk with people far away, even if no one nearby shares your craft.'},
+        {category:'Kindness',title:'Be kind to others in your field.',text:'Creative communities are smaller than they seem, and treating people well builds a lasting reputation.'},
+        {category:'Credit',title:'Name the sources that inspired you.',text:'Saying where an idea came from is honest, builds relationships, and helps others discover work worth knowing.'},
+        {category:'Routine',title:'A steady routine supports adventurous work.',text:'Calm, predictable habits in daily life leave your energy free for bold ideas in your work.'},
+        {category:'Stability',title:'Protect your ability to keep creating.',text:'A steady source of income lowers the pressure on your art and lets you keep making work for longer.'},
+        {category:'Day job',title:'A regular job can serve your creativity.',text:'It can bring income, structure, and fresh experiences, so your creative time is not weighed down by money worries.'},
+        {category:'Daily practice',title:'Make something small every day.',text:'A modest daily habit builds skill and momentum more reliably than waiting for a burst of inspiration.'},
+        {category:'Consistency',title:'Mark each day you show up.',text:'A simple calendar with a mark for every day you work makes your streak visible and gives you a reason to keep it going.'},
+        {category:'Patience',title:'Be patient with slow progress.',text:'Skill grows in small steps. Keep going, and progress you cannot yet see builds quietly in the background.'},
+        {category:'Limits',title:'Let limits sharpen your creativity.',text:'Small budgets, short deadlines, and few tools force clever choices that unlimited freedom rarely inspires.'},
+        {category:'Resourcefulness',title:'Start with the tools already in your hands.',text:'You do not need perfect equipment. Working with what you have pushes you toward inventive solutions.'},
+        {category:'Editing',title:'Choosing what to leave out is part of creating.',text:'Cutting, trimming, and focusing often make work stronger than adding more.'},
+        {category:'Focus',title:'Decide what you will say no to.',text:'Declining distractions and extra projects protects the time and attention your best work needs.'},
+        {category:'Leftovers',title:'Keep your scraps and by-products.',text:'Sketches, rough drafts, and offcuts from one project can become the seed of the next.'},
+        {category:'Rest',title:'Step away to let ideas settle.',text:'Walks, sleep, and breaks give your mind room to connect ideas you could not force together at your desk.'},
+        {category:'Action',title:'Try things even when they are imperfect.',text:'A rough first version teaches more than a perfect plan. Make it, look at it, and improve it.'},
+        {category:'Love of craft',title:'Love the work, not only the reward.',text:'When you enjoy the craft itself, you can keep going through the quiet stretches when nobody is watching.'}
       ]}
     ];
     const KEY='nootara-v1';
